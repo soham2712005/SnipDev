@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Snippet - CodeSnippet</title>
+    <link rel="stylesheet" href="snippet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <span class="code-bracket">&lt;</span>
+                        <span class="code-slash">/</span>
+                        <span class="code-bracket">&gt;</span>
+                    </div>
+                    <span class="logo-text">Snip<span class="logo-accent">Dev</span></span>
+                </div>
+                <div class="nav-right">
+                    <a href="index.html" class="btn-back">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 12H5M12 19l-7-7 7-7"/>
+                        </svg>
+                        Back to Home
+                    </a>
+                    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+                        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5"/>
+                            <line x1="12" y1="1" x2="12" y2="3"/>
+                            <line x1="12" y1="21" x2="12" y2="23"/>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                            <line x1="1" y1="12" x2="3" y2="12"/>
+                            <line x1="21" y1="12" x2="23" y2="12"/>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                        </svg>
+                        <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header">
+                <h1>Create New Snippet</h1>
+                <p>Create professional code snippets and download as images</p>
+            </div>
+
+            <div class="creator-layout">
+                <!-- Left: Editor -->
+                <div class="editor-section">
+                    <div class="editor-card">
+                        <div class="card-header">
+                            <h2>Code Editor</h2>
+                        </div>
+                        <div class="editor-form">
+                            <div class="form-group">
+                                <label for="snippetTitle">Snippet Title</label>
+                                <input type="text" id="snippetTitle" class="input-field" placeholder="Give your snippet a title...">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="languageSelect">Language</label>
+                                    <select id="languageSelect" class="select-field">
+                                        <option value="javascript">JavaScript</option>
+                                        <option value="python">Python</option>
+                                        <option value="java">Java</option>
+                                        <option value="cpp">C++</option>
+                                        <option value="csharp">C#</option>
+                                        <option value="html">HTML</option>
+                                        <option value="css">CSS</option>
+                                        <option value="typescript">TypeScript</option>
+                                        <option value="ruby">Ruby</option>
+                                        <option value="go">Go</option>
+                                        <option value="rust">Rust</option>
+                                        <option value="php">PHP</option>
+                                        <option value="sql">SQL</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="snippetTags">Tags (comma separated)</label>
+                                    <input type="text" id="snippetTags" class="input-field" placeholder="react, hooks, tutorial">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="themeSelect">Code Theme</label>
+                                    <select id="themeSelect" class="select-field">
+                                        <option value="vscode-dark">VS Code Dark</option>
+                                        <option value="dracula">Dracula</option>
+                                        <option value="monokai">Monokai</option>
+                                        <option value="github-light">GitHub Light</option>
+                                        <option value="nord">Nord</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="bgSelect">Background</label>
+                                    <select id="bgSelect" class="select-field">
+                                        <option value="none">None</option>
+                                        <option value="gradient1">Blue Purple</option>
+                                        <option value="gradient2">Pink Orange</option>
+                                        <option value="gradient3">Cyan Blue</option>
+                                        <option value="gradient4">Purple Pink</option>
+                                        <option value="gradient5">Sunset</option>
+                                        <option value="gradient6">Matrix Dark</option>
+                                        <option value="gradient7">Hacker Green</option>
+                                        <option value="gradient8">Deep Ocean</option>
+                                        <option value="gradient9">Fire</option>
+                                        <option value="gradient10">Neon Red</option>
+                                        <option value="gradient11">Forest</option>
+                                        <option value="gradient12">Electric Blue</option>
+                                        <option value="gradient13">Coral</option>
+                                        <option value="gradient14">Cyberpunk</option>
+                                        <option value="gradient15">Navy Blue</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="paddingSelect">Padding</label>
+                                    <select id="paddingSelect" class="select-field">
+                                        <option value="32">Small</option>
+                                        <option value="48" selected>Medium</option>
+                                        <option value="64">Large</option>
+                                        <option value="80">Extra Large</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="fontSizeSelect">Font Size</label>
+                                    <select id="fontSizeSelect" class="select-field">
+                                        <option value="12">12px</option>
+                                        <option value="14" selected>14px</option>
+                                        <option value="16">16px</option>
+                                        <option value="18">18px</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="watermarkInput">Watermark (optional)</label>
+                                    <input type="text" id="watermarkInput" class="input-field" placeholder="@yourname">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="codeEditor">Your Code</label>
+                                <textarea id="codeEditor" class="code-editor" placeholder="// Paste or write your code here...
+// Example:
+function greet(name) {
+  return `Hello, ${name}!`;
+}"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Preview -->
+                <div class="preview-section">
+                    <div class="preview-card">
+                        <div class="card-header">
+                            <h2>Live Preview</h2>
+                            <div class="preview-actions">
+                                <button id="updatePreviewBtn" class="btn-icon" onclick="updatePreview()">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M1 4v6h6M23 20v-6h-6"/>
+                                        <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div id="snippetPreview" class="snippet-preview">
+                            <div class="preview-header">
+                                <div class="preview-dots">
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                </div>
+                                <span class="preview-title" id="previewTitle">snippet.js</span>
+                            </div>
+                            <pre><code id="codePreview" class="hljs">// Paste or write your code here...</code></pre>
+                            <div class="watermark" id="watermark" style="display: none;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="action-buttons">
+                        <button class="btn btn-secondary" onclick="clearEditor()">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="3 6 5 6 21 6"/>
+                                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                            </svg>
+                            Clear
+                        </button>
+                        <button class="btn btn-accent" onclick="copyCode()">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                            </svg>
+                            Copy Code
+                        </button>
+                        <button class="btn btn-primary" onclick="downloadSnippet('png')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="7 10 12 15 17 10"/>
+                                <line x1="12" y1="15" x2="12" y2="3"/>
+                            </svg>
+                            PNG
+                        </button>
+                        <button class="btn btn-primary" onclick="downloadSnippet('jpg')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="7 10 12 15 17 10"/>
+                                <line x1="12" y1="15" x2="12" y2="3"/>
+                            </svg>
+                            JPG
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="creator-footer">
+        <div class="container">
+            <p class="footer-text">Made with ❤️ by <strong>Soham</strong></p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="snippet.js"></script>
+</body>
+</html>
