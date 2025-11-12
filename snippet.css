@@ -424,20 +424,8 @@ body {
 }
 
 /* Background Gradients */
-.snippet-preview.gradient1 { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important; }
-.snippet-preview.gradient2 { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%) !important; }
-.snippet-preview.gradient3 { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%) !important; }
-.snippet-preview.gradient4 { background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%) !important; }
-.snippet-preview.gradient5 { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%) !important; }
-.snippet-preview.gradient6 { background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%) !important; }
-.snippet-preview.gradient7 { background: linear-gradient(135deg, #000000 0%, #0f9b0f 100%) !important; }
-.snippet-preview.gradient8 { background: linear-gradient(135deg, #141e30 0%, #243b55 100%) !important; }
-.snippet-preview.gradient9 { background: linear-gradient(135deg, #fc4a1a 0%, #f7b733 100%) !important; }
-.snippet-preview.gradient10 { background: linear-gradient(135deg, #ee0979 0%, #ff6a00 100%) !important; }
-.snippet-preview.gradient11 { background: linear-gradient(135deg, #134e5e 0%, #71b280 100%) !important; }
-.snippet-preview.gradient12 { background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%) !important; }
-.snippet-preview.gradient13 { background: linear-gradient(135deg, #ff0844 0%, #ffb199 100%) !important; }
-.snippet-preview.gradient14 { background: linear-gradient(135deg, #360033 0%, #0b8793 100%) !important; }
+/*Some parts of this project (like core JS logic) have been removed 
+                   for copyright and intellectual property protection */
 .snippet-preview.gradient15 { background: linear-gradient(135deg, #000428 0%, #004e92 100%) !important; }
 
 /* Ensure gradients work with code */
