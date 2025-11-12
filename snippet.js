@@ -1,6 +1,4 @@
-// ⚠️ Source code removed intentionally for copyright protection.
-// Contact: sohampatange216@gmail.com or ig:@sohampatange_27 for full version or collaboration.
-// // Theme Management
+// Theme Management
 function initializeTheme() {
     const savedTheme = localStorage.getItem('theme') || 'light';
     document.documentElement.setAttribute('data-theme', savedTheme);
@@ -267,15 +265,15 @@ function applyTheme() {
 }
 
 // Apply Background
-              //Some parts of this project (like core JS logic) have been removed 
-                  // for copyright and intellectual property protection.-->
-
-
+function applyBackground() {
+    const bg = document.getElementById('bgSelect').value;
+    const preview = document.getElementById('snippetPreview');
     
     // Remove all gradient classes
-    //Some parts of this project (like core JS logic) have been removed 
-                   //for copyright and intellectual property protection.-->
-
+    preview.classList.remove('gradient1', 'gradient2', 'gradient3', 'gradient4', 'gradient5',
+                             'gradient6', 'gradient7', 'gradient8', 'gradient9', 'gradient10',
+                             'gradient11', 'gradient12', 'gradient13', 'gradient14', 'gradient15');
+    
     // Add selected gradient
     if (bg !== 'none') {
         preview.classList.add(bg);
